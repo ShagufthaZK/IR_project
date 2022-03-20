@@ -138,3 +138,6 @@ body {
   textarea {
     resize: none;
   }
+.quiz-icon{
+    height: 30px;;
+}
