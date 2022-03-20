@@ -135,9 +135,23 @@ body {
   .form-control {
     border-radius: 0;
   }
-  textarea {
+  textarea{
     resize: none;
   }
+  .form-control{
+    resize: none;
+    border-radius: 10px;
+    }
 .quiz-icon{
     height: 30px;;
+}
+.submit-input{
+  background-color: #555;
+  color: #fff;
+  font-size: 11px !important;
+  letter-spacing: 1px;
+  opacity: 0.9;
+  border: none;
+  padding: 5px 10px 5px 10px;
+  border-radius: 7px;
 }
