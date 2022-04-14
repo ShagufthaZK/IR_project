@@ -3,10 +3,10 @@
 ## Group_29
 
 + Ishita Mandal (MT21029)
-+ Lasani Hussain ()
-+ Madiha Tariq ()
++ Lasani Hussain (Mt21042)
++ Madiha Tariq (MT21125)
 + Sanchita Saha (MT21075)
-+ Shaguftha ZK ()
++ Shaguftha ZK (MT21079)
 
 **Problem statement:** Given a text passage, generate MCQs and short answers, and deploy in an end-to-end system.
 
