@@ -3,7 +3,7 @@
 ## Group_29
 
 + Ishita Mandal (MT21029)
-+ Lasani Hussain (Mt21042)
++ Lasani Hussain (MT21042)
 + Madiha Tariq (MT21125)
 + Sanchita Saha (MT21075)
 + Shaguftha ZK (MT21079)
