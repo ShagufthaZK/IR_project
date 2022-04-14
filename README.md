@@ -12,6 +12,8 @@
 
 **For model files:** Refer [Link](https://drive.google.com/drive/folders/1-kLtMFs_7k_N-sMhNvegECL9vEkv24XV?usp=sharing)
 
+**Backend:** All the files for the approaches that we have tried for the quiz generation are present in the Backend folder.
+
 ## Instructions
 
 The project execution is done using Flask on Google Colab with ngrock. 
