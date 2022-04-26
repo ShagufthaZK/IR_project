@@ -6,37 +6,59 @@ QuizGen
 {% block content %}
     <h1> QuizGen </h1>
     <br>
-    <!-- <form>
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Enter Quiz Material</label>
-          <textarea class="form-control" id="input-material" rows="8"></textarea>
-        </div>
-        <button type="submit" class="submit-input" >Generate Questions</button>
-      </form> -->
       {{ wtf.quick_form(form) }}
-      {%if results is defined and results|length > 0 %}
-      <!-- <table>
-        <tr>
-          <th> Question </th>&ensp;
-          <th> Answer </th>&ensp;
-          <th> Distractor </th>
-        </tr>
-        <br>
-        {%for item in results%}
-        <tr> 
-          <td>{{item['question']}}</td>&ensp;
-          <td>{{item['ans']}}</td>&ensp;
-          <td>{{item['distractor']}}</td>
-        </tr>
-        <br>
-        {%endfor%}
-      </table> -->
-      {%for item in results%}
-      <p>
-        Q: {{item['question']}}<br>
-        A: {{item['ans']}}<br>
-        D: {{item['distractor']}}
-      </p>
-      {%endfor%}
+	
+      {%if time_taken!=-1 %}
+	<p style="margin: 5px 5px; font-size: 13px;">Results retrieved in {{time_taken}} seconds</p>
       {%endif%}
+
+      {%if resultsQAD is defined and resultsQAD|length > 0 %}
+	<hr>
+	<div style="display: flex;align-items: center;">
+		<h2 style="flex-grow: 1;">Multiple Option Questions</h2>
+		<form action="/download">
+		    <input type="submit" value="Download" class="btn">
+		</form>
+	</div>
+	<ol>
+      	{%for item in resultsQAD%}
+	<li>
+		<p>{{item['question']}}</p>
+		<ul style="list-style-type: none">
+		  <li class="trueItem">{{item['ans']}}</li>
+			{%for subItem in item['distractor']%}
+		  <li class="falseItem">{{subItem}}</li>
+			{%endfor%}
+		</ul>
+	</li>
+      	{%endfor%}
+	</ol>
+      {%endif%}
+
+      {%if resultsSA is defined and resultsSA|length > 0 %}
+	<hr>
+	<div style="display: flex;align-items: center;">
+		<h2 style="flex-grow: 1;">Short Answer Questions</h2>
+	</div>
+	<ol>
+      	{%for item in resultsSA%}
+	<li>
+		<p>{{item['question']}}</p>
+		<ul style="list-style-type: none">
+		  <li class="trueItem">{{item['ans']}}</li>
+		</ul>
+	</li>
+      	{%endfor%}
+	</ol>
+      {%endif%}
+
+	{%if error is defined and error|length > 0 %}
+	<hr>
+	<ul>
+	<li><p>{{error}}</p>
+	</li>
+	</ul>
+      {%endif%}
+      
+
 {% endblock %}
