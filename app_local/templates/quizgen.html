@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}
+QuizGen
+{% endblock %}
+{% block content %}
+    <h1> QuizGen </h1>
+    <br>
+      {{ wtf.quick_form(form) }}
+      {%if results is defined and results|length > 0 %}
+      <hr>
+      <div style="display: flex;align-items: center;">
+        <h2 style="flex-grow: 1;">Questions</h2>
+        <form action="/download">
+            <input type="submit" value="Download" class="btn">
+        </form>
+      </div>
+      <ol>
+          {%for item in results%}
+      <li>
+        <p>{{item['question']}}</p>
+        <ul style="list-style-type: none">
+          <li class="trueItem">{{item['ans']}}</li>
+          {%for subItem in item['distractor']%}
+          <li class="falseItem">{{subItem}}</li>
+          {%endfor%}
+        </ul>
+      </li>
+          {%endfor%}
+      </ol>
+      {%endif%}
+{% endblock %}

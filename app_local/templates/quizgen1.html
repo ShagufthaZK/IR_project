@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}
+QuizGen
+{% endblock %}
+{% block content %}
+    <h1> QuizGen </h1>
+    <br>
+    <!-- <form>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Enter Quiz Material</label>
+          <textarea class="form-control" id="input-material" rows="8"></textarea>
+        </div>
+        <button type="submit" class="submit-input" >Generate Questions</button>
+      </form> -->
+      {{ wtf.quick_form(form) }}
+      {%if results is defined and results|length > 0 %}
+      <!-- <table>
+        <tr>
+          <th> Question </th>&ensp;
+          <th> Answer </th>&ensp;
+          <th> Distractor </th>
+        </tr>
+        <br>
+        {%for item in results%}
+        <tr> 
+          <td>{{item['question']}}</td>&ensp;
+          <td>{{item['ans']}}</td>&ensp;
+          <td>{{item['distractor']}}</td>
+        </tr>
+        <br>
+        {%endfor%}
+      </table> -->
+      {%for item in results%}
+      <p>
+        Q: {{item['question']}}<br>
+        A: {{item['ans']}}<br>
+        D: {{item['distractor']}}
+      </p>
+      {%endfor%}
+      {%endif%}
+{% endblock %}
