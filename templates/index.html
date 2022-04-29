@@ -4,5 +4,30 @@ About
 {% endblock %}
 {% block content %}
     <h1> Welcome to QuizGen </h1>
+    <br><br>
+    <p>Quizzes are a great way to test and aid a student’s understanding
+        of a topic, as demonstrated by various studies. Setting up
+        quizzes is time consuming since it requires considerations such as
+        relevance to the topic, unambiguity, originality of the questions, and
+        generation of distractors (choices) for MCQs. This project aims to
+        design an end-to-end web application which can generate different
+        formats of questions(MCQ,short answer). The models of abstractive
+        summarizer and BERT-HLSQG are used for question generation and
+        answering and wordsense, wordnet and conceptnet for distractor
+        generation. Below is the high level diagram of the modules:</p>
+        <br><br><br>
+        <p> 
+            <div class="modules" style="align-content: center;">
+                <img src="../static/img/DG_module.drawio.svg"><br><br><br><br>
+                 <img src="../static/img/Comp_Arch.drawio.svg">  
+            </div>
+        </p>
+        <br><br>
+            <div style="text-align: center;">
+                <!-- <h2 style="flex-grow: 1;">Multiple Option Questions</h2> -->
+                <form action="/quizgen">
+                    <input type="submit" value="Generate Quiz" class="btn" style="align-content: center;">
+                </form>
+            </div>
 {% endblock %}
 
