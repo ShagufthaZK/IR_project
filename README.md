@@ -12,9 +12,13 @@
 
 **For model files:** Refer [Link](https://drive.google.com/drive/folders/1-kLtMFs_7k_N-sMhNvegECL9vEkv24XV?usp=sharing)
 
-**Backend:** All the files for the approaches that we have tried for the quiz generation are present in the Backend folder.
+**Complete Architecture Model Overview**
+![image](https://user-images.githubusercontent.com/89360256/165896749-cf5c58c1-6d0f-4a64-a7a6-357527d4b1a9.png)
 
-![image](https://user-images.githubusercontent.com/89360256/165895903-db0794df-24b8-49c1-9220-04ed7f7ef7ec.png)
+**Distractor Generation Module Overview**
+![image](https://user-images.githubusercontent.com/89360256/165896827-ee3bf7e6-60a7-47cb-a7f8-d82075984bf4.png)
+
+**Backend:** All the files for the approaches that we have tried for the quiz generation are present in the Backend folder.
 
 
 ## Instructions
