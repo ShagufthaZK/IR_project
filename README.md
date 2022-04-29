@@ -14,6 +14,9 @@
 
 **Backend:** All the files for the approaches that we have tried for the quiz generation are present in the Backend folder.
 
+![image](https://user-images.githubusercontent.com/89360256/165895903-db0794df-24b8-49c1-9220-04ed7f7ef7ec.png)
+
+
 ## Instructions
 
 The project execution is done using Flask on Google Colab with ngrock. 
